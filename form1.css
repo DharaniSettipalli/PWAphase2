@@ -1,0 +1,66 @@
+#main{
+	background: grey;
+	text-align: center;
+}
+header{
+	background:#D7DDDD;
+	height: 10%;
+	padding: 1%;
+	margin:1%;
+}
+#main a{
+	text-decoration: none;
+}
+#main button{
+	background: green;
+	border-radius: 50%;
+	padding: 1%;
+}
+
+
+#form1{
+	background: #6F2C6D;
+}
+
+
+.main{
+	background:#2C656F;
+	margin:3%;
+	padding: 2%;
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 5%;
+	flex-direction: row;
+	justify-content: space-around;
+}
+header{
+	background:blue;
+	height:10vh;
+	padding: 1%;
+	margin:1%;
+}
+.sub{
+	width:92%;
+	background: #FCF3CF;
+	margin: 1%;
+	padding: 1%;
+	border-radius: 4%;
+}
+.sub1{
+	width:43%;
+	background:#D7DBDD ;
+	margin: 1%;
+	padding: 1%;
+	border-radius:3%; 
+}
+input,select{
+	width: 90%;
+	margin: 1%;
+}
+button{
+	width:10%;
+	align-content: center;
+}
+.profile{
+	color:red;
+}

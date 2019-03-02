@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>resume building</title>
+	<link rel="stylesheet" type="text/css" href="form1.css">
+  <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body id="form1">
+	<div class="main">
+		<h1 style="color:white">RESUME BUILDING</h1>
+		<div class="sub">
+			<h2>Career Objective</h2>
+			<select name="career" id="career">
+				<option>select your career objective</option>
+				<option>I want to seek a position in reputed company to explore my skills </option>
+				<option>I want to attain a position to explore my technical skills for the benefit of the organisation
+				</option>
+				
+			</select>
+		</div>
+
+		<div class="sub1">
+			<h2>Personal details</h2>
+			<input type="text" name="name" id="name" placeholder="Enter your name here"><br>
+			<input type="text" name="roll" id="roll" placeholder="Enter your roll no here"><br>
+			<input type="email" name="email" id="email" placeholder="Enter your E-mail ID here"><br>
+			<input type="number" name="phno" id="phno" placeholder="Enter your Phone number here"><br>
+			<input type="text" name="place" id="place" placeholder="Enter your place here">
+		</div>
+		<div class="sub1">
+			<h2>PG Details</h2>
+			<select name="PGdegree" id="pgdegree">
+			 <option>Please select your degree</option>
+			 <option>M.tech</option>
+			 <option>M.com</option>
+			 <option>MCA</option>
+             <option>MBA</option>
+             <option>MD</option>
+         </select><br>
+         <input type="text" name="pginstitute" id="pgins" placeholder="Enter your college name here"><br>
+         <input type="text" name="pgper" id="pgper" placeholder="Enter your Percentage here"><br>
+         <input type="text" name="pgyop" id="pgyop" placeholder="Enter your passed out year here">
+		</div>
+		<div class="sub1">
+			<h2>UG Details</h2>
+			<select name="UGdegree" id="ugdegree">
+			 <option>Please select your degree</option>
+			 <option>B.tech</option>
+			 <option>B.com</option>
+			 <option>B.sc</option>
+             <option>BBA</option>
+             <option>BD</option>
+         </select><br>
+         <input type="text" name="uginstitute" id="ugins" placeholder="Enter your college name here"><br>
+         <input type="text" name="ugper" id="ugper" placeholder="Enter your Percentage here"><br>
+         <input type="text" name="ugyop" id="ugyop" placeholder="Enter your passed out year here">
+		</div>
+		<div class="sub1">
+			<h2>+2 Details</h2>
+			<select name="inter" id="inter">
+			 <option>Please select your degree</option>
+			 <option>Intermediate</option>
+			 <option>Diploma</option>
+         </select><br>
+         <input type="text" name="intername" id="interins" placeholder="Enter your college name here"><br>
+         <input type="text" name="interper" id="interper" placeholder="Enter your Percentage here"><br>
+         <input type="text" name="interyop" id="interyop" placeholder="Enter your passed out year here">
+		</div>
+		<div class="sub1">
+			<h2>SSC Details</h2>
+			<select name="ssc" id="ssc">
+			 <option>Please select your degree</option>
+			 <option>s.s.c</option>
+			 <option>cbse</option>
+         </select><br>
+         <input type="text" name="sscinstitute" id="sscins" placeholder="Enter your School name here"><br>
+         <input type="text" name="sscper" id="sscper" placeholder="Enter your Percentage here"><br>
+         <input type="text" name="sscyop" id="sscyop" placeholder="Enter your passed out here">
+		</div>
+	</div>
+	<button  id="button" name="button" onclick="submit()">submit</button>
+
+</body>
+</html>
+<script type="text/javascript">
+	function submit(){
+      
+      var career=document.getElementById('career').value;
+      var name=document.getElementById('name').value;
+      var roll=document.getElementById('roll').value;
+      var email=document.getElementById('email').value;
+      var phno=document.getElementById('phno').value;
+      var place=document.getElementById('place').value;
+      
+      var pgdegree=document.getElementById('pgdegree').value;
+      var pgins=document.getElementById('pgins').value;
+      var pgper=document.getElementById('pgper').value;
+      var pgyop=document.getElementById('pgyop').value;
+
+      var ugdegree=document.getElementById('ugdegree').value;
+      var ugins=document.getElementById('ugins').value;
+      var ugper=document.getElementById('ugper').value;
+      var ugyop=document.getElementById('ugyop').value;
+
+      var inter=document.getElementById('inter').value;
+      var interins=document.getElementById('interins').value;
+      var interper=document.getElementById('interper').value;
+      var interyop=document.getElementById('interyop').value;
+
+       var ssc=document.getElementById('ssc').value;
+      var sscins=document.getElementById('sscins').value;
+      var sscper=document.getElementById('sscper').value;
+      var sscyop=document.getElementById('sscyop').value;
+      
+
+      var indexedDB=window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+      indexedDB ? console.log("success") : console.log("fail");
+      var open;
+      var result;
+      var store;
+      var tx;
+      var request = indexedDB.open("database",1);
+      request.onupgradeneeded = function(e){
+      	open = e.target.result;
+      	store =open.createObjectStore("resumedata",{keyPath:"name"});
+      }
+      request.onerror=function(e){
+        console.log("error"+e);
+      }
+      request.onsuccess=function(e){
+        open=e.target.result;
+        tx = open.transaction("resumedata","readwrite");
+        store =tx.objectStore("resumedata");
+        store.put({
+        	car:career,
+        	name:name,
+        	rollno:roll,
+        	mail:email,
+        	mobile:phno,
+        	native:place,
+        	education:[
+                 {
+                   degree:pgdegree,
+                   inst:pgins,
+                   per:pgper,
+                   yop:pgyop
+                 },
+                 {
+                   degree:ugdegree,
+                   inst:ugins,
+                   per:ugper,
+                   yop:ugyop
+                 },
+                 {
+                 	degree:inter,
+                   inst:interins,
+                   per:interper,
+                   yop:interyop
+                 },
+                 {
+                 	degree:ssc,
+                   inst:sscins,
+                   per:sscper,
+                   yop:sscyop
+                 }
+        	]
+
+        });
+    }
+    window.open("index1.html","_self");
+	}
+</script>

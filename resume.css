@@ -1,0 +1,26 @@
+.main{
+	background: violet;
+	margin: 10%;
+	display: flex;
+	border-radius: 5%;
+}
+.left{
+	background: skyblue;
+	text-align: center;
+	margin:2%;
+	width:50%;
+	height:90%;
+	border-radius:5%;
+	box-shadow:2px 2px 2px 2px;
+	padding:2%;
+	}
+.right{
+	border-radius:5%; 
+	box-shadow:2px 2px 2px 2px;
+    background: yellow;
+    text-align:left;
+    margin:2%;
+    width: 40%;
+    height: 90%;
+    padding:2%;
+}

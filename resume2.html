@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resume Profile </title>
+	<link rel="stylesheet" type="text/css" href="form1.css">
+	<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+	<div class="main">
+		<div class="left">
+			
+		</div>
+		<div class="right">
+			
+		</div>
+		
+	</div>
+
+</body>
+</html>
+<script type="text/javascript">
+
+	var url=window.location.search;
+	var length=url.length;
+	var profile=url.slice(1,length);
+
+	var indexedDB=window.indexedDB || window.mozIndexedDB ||
+		   window.webKitIndexedDB ||window.msIndexedDB;
+		indexedDB? console.log("success") : console.log("fail");
+		     var open;
+		     var result;
+		     var store;
+		     var tx;
+		     var request=indexedDB.open("database",1);
+		    request.onupgradeneeded=function(e){
+               open=e.target.result;
+               store=open.createObjectStore("resumedata",{keyPath:"name"});
+           
+		    }
+
+		    request.onerror=function(e){
+                console.log("error"+e);
+		    }
+
+		    request.onsuccess=function(e){
+		    	open=e.target.result;
+		    	tx=open.transaction("resumedata","readwrite");
+		    	store=tx.objectStore("resumedata");
+		    	var info=store.get(profile);
+		    	info.onsuccess=function(data){
+		    		// console.log(data);
+		    		display(data.target.result);
+		    	}
+		    }
+		    	var left=document.querySelector(".left");
+		    	var right=document.querySelector(".right");
+		    	function display(d){
+		    		var image=document.createElement("img");
+		    		image.src="./snow-man.jpg";
+		    		left.append(image);
+
+		    	  var h2=document.createElement("h2");
+	              h2.textContent=d.name;
+	             left.appendChild(h2);
+
+                 //    var h21=document.createElement("h3");
+                 //    h21.textContent=d.rollno;
+	                // left.appendChild(h21);
+
+	                
+
+                 //    var h22=document.createElement("h3");
+	                // h22.textContent=d.native;
+                 //    left.appendChild(h22);
+	              
+                  /*var h23=document.createElement("h3");
+	               h23.textContent=e.des;
+	               left.appendChild(h23);*/
+
+	                // var h1=document.createElement("h1");
+                 //    h1.innerHTML="RESUME BUILDING";
+                 //    right.appendChild(h1);
+
+                   // var e1=document.createElement("h1");
+                   // e1.innerHTML="career objective";
+                   // right.appendChild(e1);
+
+  //                  var hr=document.createElement("hr");
+  //                  right.appendChild(hr);
+
+  //                  var p=document.createElement("p");
+  //                  p.textContent=d.car;
+  //                  right.appendChild(p);
+		    	
+  //                  var h2=document.createElement("h2");
+  //                  h2.innerHTML="EDUCATIONAL DETAILS";
+  //                  right.appendChild(h2);
+  //                  var ww=document.createElement("hr");
+  //                  right.appendChild(ww);
+  //               for(var i in d.education){
+		// var h4=document.createElement("h4");
+		// h4.textContent=d.education[i].degree;
+		// right.append(h4);
+
+		// var ul=document.createElement("ul");
+		// var instli=document.createElement("li");
+		// instli.textContent=d.education[i].inst;
+		// ul.appendChild(instli)
+
+		// var perli=document.createElement("li");
+		// perli.textContent=d.education[i].per;
+		// ul.append(perli);
+
+		// 	var yopli=document.createElement("li");
+		// 	yopli.textContent=d.education[i].yop;
+		// 	ul.append(yopli);
+	 // 		h4.appendChild(ul);
+		
+	 // }
+                //    var table=document.createElement("table");
+                //    table.border="1";
+                //    var tr1="<tr><td>sno</td><td>degree</td><td>institute</td><td>per</td><td>yop</td></tr>";
+                //    var tr2="";
+                //    for(i=0;i<d.length;i++)
+                //    {
+                //    tr2=tr2+"<tr><td>"+d[i].sno+"</td><td>"+d[i].education.degree+"</td><td>"+d[i].education.institute+"</td><td>"+d[i].education.per+"</td><td>"+d[i].education.yop+"</td></tr>";
+                //    }
+                //    table.innerHTML=tr1+tr2;
+                //    right.appendChild(table);
+ 
+                   
+  
+                //   var ee=document.createElement("h2");
+                //   ee.innerHTML="Known Languages:";
+                //   right.appendChild(ee);
+                //   var tt=document.createElement("hr");
+                //   right.append(tt);
+                //   var ul=document.createElement("ul");
+                //   for(i=0;i<d.length;i++){
+     	          // var li=document.createElement("li");
+     	          // li.textContent=d[i].lang;
+     	          // ul.appendChild(li);
+                //   }
+                //   right.appendChild(ul);
+                  
+              }
+
+</script>
